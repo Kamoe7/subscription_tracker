@@ -4,8 +4,8 @@ const subscriptionSchema = new mongoose.Schema(
     {
 
         name:{
-            typeof:String,
-            require:[true,"Subscription Name is required"],
+            type:String,
+            required:[true,"Subscription Name is required"],
             trim:true,
             minLength:2,
             maxLength:50
@@ -27,7 +27,7 @@ const subscriptionSchema = new mongoose.Schema(
         
         },
         category :{
-            typeof:String,
+            type:String,
             enum:['sports','entertainment','news','education','health'],
             required:true
         },
